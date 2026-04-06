@@ -20,15 +20,14 @@ namespace Ucu.Poo.Restaurant
 
             Table oneTable = new Table(1);
             Waiter waiter = new Waiter("John");
-            Order oneOrder = new Order(1, false);
             waiter.AssignTable(oneTable);
             oneTable.Occupy();
-            waiter.TakeOrder(oneOrder, burger);
-            waiter.TakeOrder(oneOrder, burger);
+            waiter.TakeOrder(oneTable, burger);
+            waiter.TakeOrder(oneTable, burger);
             Console.WriteLine(
                 $"La mesa {oneTable.Number} está ocupada: {oneTable.IsOccupied} " +
                 $"y la atiende: {waiter.Name}");
-            Console.WriteLine($"La factura de la mesa 1 es: {oneOrder.Bill()} ");
+            Console.WriteLine($"La factura de la mesa 1 es: {oneTable.GetBill()} ");
             oneTable.Free();
             Console.WriteLine(
                 $"La mesa {oneTable.Number} está ocupada: {oneTable.IsOccupied}");

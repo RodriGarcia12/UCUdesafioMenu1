@@ -8,9 +8,9 @@ namespace Ucu.Poo.Restaurant
     public class Order
     {
         private List<Dish> order = new List<Dish>();
-        public double Total;
-        public bool Delivery;
-        public int Table;
+        public double Total { get; set; }
+        public bool Delivery { get; }
+        public int Table { get; }
 
         public Order(int table, bool delivery)
         {
@@ -18,12 +18,17 @@ namespace Ucu.Poo.Restaurant
             this.Delivery = delivery;
             this.Total = 0;
         }
-        public void AddToOrder(Dish dish)
+
+        public Order()
+        {
+        }
+
+        public void AddDish(Dish dish)
         {
             this.order.Add(dish);
         }
 
-        public bool HasOrders()
+        public bool HasDishes()
         {
             return this.order.Count > 0;
         }

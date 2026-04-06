@@ -21,9 +21,9 @@ namespace Ucu.Poo.Restaurant
             this.assignedTables.Add(table);
         }
 
-        public void TakeOrder(Order order, Dish dish)
+        public void TakeOrder(Table table, Dish dish)
         {
-            order.AddToOrder(dish);
+            table.AddToOrder(dish);
         }
 
     }

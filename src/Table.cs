@@ -10,10 +10,12 @@ namespace Ucu.Poo.Restaurant
 //        private List<Dish> order = new List<Dish>();
         public int Number { get; set; }
         public bool IsOccupied { get; set; }
+        private Order order;
 
         public Table(int number)
         {
             this.Number = number;
+            this.order = new Order(this.Number, false);
         }
 
         public void Occupy()
@@ -24,26 +26,27 @@ namespace Ucu.Poo.Restaurant
         public void Free()
         {
             this.IsOccupied = false;
+            this.order.Free();
         }
-/*
+
+        public Order GetOrder(Table table)
+        {
+            return table.order;
+        }
+
         public void AddToOrder(Dish dish)
         {
-            this.order.Add(dish);
+            this.order.AddDish(dish);
         }
 
         public bool HasOrders()
         {
-            return this.order.Count > 0;
+            return this.order.HasDishes();
         }
-
-        public double Bill()
+        public double GetBill()
         {
-            double total = 0;
-            foreach (Dish dish in this.order)
-                total += dish.Price;
-
-            return total;
+            return this.order.Bill();
         }
-*/
+
     }
 }
