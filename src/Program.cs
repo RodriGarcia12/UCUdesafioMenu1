@@ -23,9 +23,11 @@ namespace Ucu.Poo.Restaurant
             waiter.AssignTable(oneTable);
             oneTable.Occupy();
             waiter.TakeOrder(oneTable, burger);
+            waiter.TakeOrder(oneTable, burger);
             Console.WriteLine(
                 $"La mesa {oneTable.Number} está ocupada: {oneTable.IsOccupied} " +
                 $"y la atiende: {waiter.Name}");
+            Console.WriteLine($"La factura de la mesa 1 es: {oneTable.GetBill()} ");
             oneTable.Free();
             Console.WriteLine(
                 $"La mesa {oneTable.Number} está ocupada: {oneTable.IsOccupied}");
