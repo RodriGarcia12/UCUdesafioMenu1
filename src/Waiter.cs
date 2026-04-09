@@ -3,7 +3,7 @@ using System.Collections.Generic;
 namespace Ucu.Poo.Restaurant
 {
     /// <summary>
-    /// Representa un mozo en el restaurante, encargado de atender mesas.
+    /// Representa un mozo en el restaurante, encargado de atender mesas, toma la orden y se lo asigna a una mesa.
     /// </summary>
     public class Waiter
     {

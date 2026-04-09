@@ -5,6 +5,7 @@ using System.Runtime.CompilerServices;
 
 namespace Ucu.Poo.Restaurant
 {
+    // Se genera clase para las Ordenes. Servira para un futuro si existe la posibilidad de un delivery
     public class Order
     {
         private List<Dish> order = new List<Dish>();

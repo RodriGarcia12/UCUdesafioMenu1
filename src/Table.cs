@@ -3,11 +3,10 @@ using System.Collections.Generic;
 namespace Ucu.Poo.Restaurant
 {
     /// <summary>
-    /// Representa una mesa en el restaurante.
+    /// Representa una mesa en el restaurante. Nos indica numero y si esta ocupada
     /// </summary>
     public class Table
     {
-//        private List<Dish> order = new List<Dish>();
         public int Number { get; set; }
         public bool IsOccupied { get; set; }
         private Order order;
